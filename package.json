@@ -25,7 +25,9 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-loadable": "^5.5.0",
-    "react-router-dom": "^4.3.1"
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux-saga": "^0.16.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",
