@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Book-Reviews-Project/React-Front-End#readme",
   "dependencies": {
+    "dotenv-webpack": "^1.5.7",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

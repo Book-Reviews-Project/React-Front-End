@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const port = process.env.PORT || 3000;
 
@@ -29,6 +30,12 @@ module.exports = {
       // favicon: 'public/favicon.ico'
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new Dotenv({
+      path: './.env',
+      safe: true,
+      systemvars: true,
+      silent: false
+    })
   ],
   devServer: {
     host: 'localhost',
