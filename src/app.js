@@ -1,11 +1,23 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router';
+import createBrowserHistory from 'history/createBrowserHistory';
+import store from './storeConfiguration';
 
-function app (props) {
-  return {
-    
-  };
+const history = createBrowserHistory();
+// import { hot } from 'react-hot-loader';
+// import { Switch, Route } from 'react-router'
+import Navigation from './containers/navigationContainer';
+
+
+function App () {
+  return (
+    <Provider store={store}>
+      <Router history={history}>
+        <Navigation />
+      </Router>
+    </Provider>
+  );
 }
 
-export default hot(module)(app);
+export default App;

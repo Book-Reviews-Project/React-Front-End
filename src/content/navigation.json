@@ -1,0 +1,44 @@
+{
+  "item1": {
+    "text": "Home",
+    "destination": "/home",
+    "dropdown": false
+  },
+  "item2": {
+    "text": "Categories",
+    "destination": "#",
+    "dropdown": true,
+    "items": {
+      "items1": {
+        "text": "Romance",
+        "destination": "/romance"
+      },
+      "items2": {
+        "text": "Biography",
+        "destination": "/biography"
+      },
+      "items3": {
+        "text": "Fantasy",
+        "destination": "/fantasy"
+      },
+      "items4": {
+        "text": "Science-Fiction",
+        "destination": "/science-fiction"
+      },
+      "items5": {
+        "text": "Mystery",
+        "destination": "/mystery"
+      }
+    }
+  },
+  "item3": {
+    "text": "Register",
+    "destination": "/register",
+    "dropdown": false
+  },
+  "item4": {
+    "text": "Login",
+    "destination": "/login",
+    "dropdown": false
+  }
+}

@@ -2,7 +2,7 @@
   "name": "React-Front-End",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start:dev": "webpack-dev-server",
     "storybook": "start-storybook -p 9001",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Book-Reviews-Project/React-Front-End#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0",
     "dotenv-webpack": "^1.5.7",
     "prop-types": "^15.6.2",
@@ -30,9 +31,11 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-regenerator": "^7.0.0",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-knobs": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
@@ -40,10 +43,13 @@
     "@storybook/cli": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^5.9.0",
+    "eslint-loader": "^2.1.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "html-webpack-plugin": "^3.2.0",

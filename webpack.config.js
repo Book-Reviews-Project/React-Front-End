@@ -1,47 +1,53 @@
+require('dotenv').config()
+require('@babel/polyfill');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const path = require('path');
 
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  // Webpack configuration goes here
-  mode: 'development',
-  entry: './src/index.js',
+  mode: "development",
+  entry: ["@babel/polyfill", __dirname + "/src/index.js"],
   output: {
-    filename: 'bundle.[hash].js',
-    publicPath: '/'
+      path: __dirname + '/static',
+      filename: "[name].[chunkhash:8].js"
   },
-  devtool: 'inline-source-map',
+  devtool: "source-map",
   module: {
-    rules: [
-
-      // First Rule
-      {
-        test: /\.(js)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      },
-    ]
+      rules: [
+          {
+              enforce: "pre",
+              test: /\.(js|jsx)$/,
+              exclude: /node_modules/,
+              use: "eslint-loader"
+          },
+          {
+              test: /\.(js|jsx)$/,
+              exclude: /node_modules/,
+              use: {
+                  loader: "babel-loader",
+                  options: {
+                      presets: [
+                          "env",
+                          "react",
+                          "stage-1"
+                      ]
+                  }
+              }
+          }
+      ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       // favicon: 'public/favicon.ico'
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new Dotenv({
-      path: './.env',
-      safe: true,
-      systemvars: true,
-      silent: false
     })
   ],
   devServer: {
-    host: 'localhost',
     port: port,
-    historyApiFallback: true,
-    open: true,
-    hot: true
+    contentBase: path.join(__dirname, 'public'),
+    open: true
   }
 };

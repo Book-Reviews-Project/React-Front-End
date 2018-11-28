@@ -1,9 +1,8 @@
-import { CombineReducers } from 'redux';
+import { combineReducers } from 'redux';
+import navReducer from './containers/navigationContainer/reducer';
 
-// import reducers
-
-const RootReducer = CombineReducers({
-  // reudcers go here
+const RootReducer = combineReducers({
+  navigationReducer: navReducer
 });
 
 export default RootReducer;
