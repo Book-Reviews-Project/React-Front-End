@@ -40,5 +40,10 @@
     "text": "Login",
     "destination": "/login",
     "dropdown": false
+  },
+  "item5": {
+    "text": "Profile",
+    "destination": "/profile",
+    "dropdown": false
   }
 }

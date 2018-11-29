@@ -1,22 +1,22 @@
-import { GETLOGIN, LOGINERROR, LOGINSUCCESS } from './constants';
+import { SEARCHREVIEWS, SEARCHREVIEWSSUCCESS, SEARCHREVIEWSERROR } from './constants';
 
-export function getLogIn(payload) {
+export function searchReview(payload) {
   return {
-    action: GETLOGIN,
+    type: SEARCHREVIEWS,
     payload: payload
   };
 }
 
-export function getLogInSuccess(payload) {
+export function searchReviewSuccess(payload) {
   return {
-    action: LOGINSUCCESS,
+    type: SEARCHREVIEWSSUCCESS,
     payload: payload
   };
 }
 
-export function getLogInError(payload) {
+export function searchReviewError(payload) {
   return {
-    action: LOGINERROR,
+    type: SEARCHREVIEWSERROR,
     payload: payload
   };
 }

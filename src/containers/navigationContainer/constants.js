@@ -1,3 +1,3 @@
-export const GETLOGIN = 'GetLogIn';
-export const LOGINSUCCESS = 'LogInSuccess';
-export const LOGINERROR = 'LogInError';
+export const SEARCHREVIEWS = 'searchReviews';
+export const SEARCHREVIEWSSUCCESS = 'SearchReviewsSuccess';
+export const SEARCHREVIEWSERROR = 'searchReviewsError';

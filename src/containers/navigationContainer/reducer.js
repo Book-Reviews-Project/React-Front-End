@@ -1,14 +1,15 @@
 import Navigation from '../../content/navigation.json';
-import { LOGINSUCCESS, LOGINERROR } from './constants';
+import { SEARCHREVIEWSSUCCESS, SEARCHREVIEWSERROR } from './constants';
+
 const initialState = {
   navItems: Navigation
 };
 
 function NavigatioNReducer(state = initialState, action) {
   switch (action.type){
-  case LOGINSUCCESS:
+  case SEARCHREVIEWSSUCCESS:
     return {...state, ...action.payload};
-  case LOGINERROR:
+  case SEARCHREVIEWSERROR:
     return {...state, ...action.payload};
   default:
     return state;
